@@ -1,0 +1,94 @@
+Automated E-Commerce Deployment on Azure with Terraform and GitHub Actions
+
+Project Goal: To create a scalable and resilient web application infrastructure on Azure using Terraform, managed through a GitHub repository with CI/CD pipelines.
+
+Project Breakdown (15 Days):
+
+Phase 1: Foundation (Days 1-3)
+
+Day 1: Project Setup and Terraform Basics:
+Create a GitHub repository for the project.
+Install Terraform and Azure CLI.
+Configure Azure credentials for Terraform.
+Write a simple Terraform configuration to create an Azure Resource Group.
+Initialize, plan, and apply the configuration.
+Day 2: Virtual Network and Subnets:
+Expand the Terraform configuration to create an Azure Virtual Network (VNet) and multiple subnets (e.g., for web servers, databases).
+Understand and implement network address spaces and subnet ranges.
+Test connectivity within the VNet.
+Day 3: Network Security Groups (NSGs):
+Implement NSGs to control inbound and outbound traffic for the subnets.
+Define rules for allowing HTTP/HTTPS traffic to web servers and restricting database access.
+Test NSG rules using Azure network tools.
+Phase 2: Web Application Infrastructure (Days 4-8)
+
+Day 4: Virtual Machines (VMs) and Storage:
+Create Azure VMs for web servers using Terraform.
+Provision storage accounts and disks for the VMs.
+Configure VM network interfaces and associate them with the VNet and subnets.
+Day 5: Load Balancer and Application Gateway:
+Implement an Azure Load Balancer or Application Gateway to distribute traffic across the web server VMs.
+Configure health probes and load-balancing rules.
+Test load balancing and failover scenarios.
+Day 6: Azure Database (e.g., PostgreSQL or MySQL):
+Deploy an Azure Database service using Terraform.
+Configure database settings, including firewall rules and connection strings.
+Connect the web application to the database.
+Day 7: Application Configuration and Secrets Management:
+Use Terraform variables and outputs to manage application configuration.
+Implement Azure Key Vault to store sensitive information (e.g., database credentials).
+Securely retrieve secrets from Key Vault within the Terraform configuration.
+Day 8: Terraform Modules:
+Refactor the Terraform code into reusable modules (e.g., for VNet, VMs, database).
+Improve code organization and maintainability.
+Learn how to call modules from the main terraform code.
+Phase 3: CI/CD and Automation (Days 9-13)
+
+Day 9: GitHub Actions Setup:
+Create a GitHub Actions workflow to automate Terraform deployments.
+Implement steps for terraform init, terraform plan, and terraform apply.
+Store Azure credentials as GitHub Secrets.
+Day 10: Automated Terraform Plan and Validation:
+Configure the GitHub Actions workflow to automatically run terraform plan on pull requests.
+Implement static code analysis and validation tools (e.g., terraform fmt, terraform validate).
+Add comments to the pull request with the plan output.
+Day 11: Automated Terraform Apply and State Management:
+Configure the GitHub Actions workflow to automatically run terraform apply on merges to the main branch.
+Implement remote state management using Azure Storage or Terraform Cloud.
+Secure the remote state.
+Day 12: Infrastructure Testing:
+Implement basic infrastructure tests using tools like terraform-compliance or inspec.
+Incorporate the tests into the CI/CD pipeline.
+Test that the deployed infrastructure matches the expected configuration.
+Day 13: Scalability and Monitoring:
+Implement Azure Monitor to collect metrics and logs from the deployed resources.
+Configure autoscaling for the web server VMs.
+Create alerts for critical events.
+Phase 4: Refinement and Documentation (Days 14-15)
+
+Day 14: Documentation:
+Create comprehensive documentation for the project, including architecture diagrams, configuration details, and deployment instructions.
+Document the GitHub Actions workflows and Terraform modules.
+Document how to contribute to the repository.
+Day 15: Review and Optimization:
+Review the entire project for potential improvements and optimizations.
+Refactor the Terraform code and GitHub Actions workflows as needed.
+Present the deployed infrastructure and the CI/CD pipeline.
+Azure Resources Used:
+
+Resource Groups
+Virtual Networks (VNets) and Subnets
+Network Security Groups (NSGs)
+Virtual Machines (VMs)
+Storage Accounts and Disks
+Load Balancers/Application Gateways
+Azure Database (PostgreSQL/MySQL)
+Azure Key Vault
+Azure Monitor.
+Tools:
+
+Terraform
+Azure CLI
+GitHub Actions
+terraform-compliance or inspec.
+This structured approach allows you to progressively build your Azure infrastructure and CI/CD pipeline, gaining valuable experience along the way. Remember to adapt the project to your specific needs and interests.
